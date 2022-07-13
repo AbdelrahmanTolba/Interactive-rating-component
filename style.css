@@ -22,12 +22,24 @@
 html {
   box-sizing: border-box;
 }
+@media (max-width: 35em) {
+  html {
+    font-size: 56.25%;
+  }
+}
+@media (max-width: 23.4375em) {
+  html {
+    font-size: 50%;
+  }
+}
+
 body {
   height: 100vh;
   font-size: 93.75%;
   font-family: var(--font);
   background-color: var(--color-blue--VeryDark);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
@@ -69,6 +81,7 @@ body {
   line-height: 1.5rem;
 }
 .rate {
+  font-size: 1.2rem;
   margin: 1.5rem 0;
   display: flex;
   width: 100%;
@@ -86,11 +99,11 @@ body {
 .rate span:not(:last-child) {
   margin-right: 1rem;
 }
-.rate span:hover,
-.rate span:active {
-  background-color: var(--color-grey--Light);
+.rate__num:hover {
+  background-color: var(--color-primary);
   color: var(--color-white);
 }
+
 .btn {
   cursor: pointer;
   display: block;
@@ -103,17 +116,15 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   letter-spacing: 0.2rem;
+  font-size: 1rem;
   transition: all 0.3s;
 }
 .btn:hover {
   background-color: var(--color-white);
   color: var(--color-primary);
 }
-.rating {
-  /* display: none; */
-}
+
 .thanking {
-  /* display: none; */
   align-items: center;
 }
 .rate__out {
@@ -132,6 +143,36 @@ body {
 .thanking__paragraph {
   text-align: center;
 }
-.footer {
+
+.hidden {
   display: none;
+}
+.selected {
+  background-color: var(--color-grey--Light) !important;
+  color: var(--color-white) !important;
+}
+.footer {
+  margin-top: 4rem;
+  font-size: 1.2rem;
+  color: var(--color-grey--Light);
+}
+.footer a {
+  text-decoration: none;
+  color: var(--color-primary);
+}
+@media (max-width: 23.4375em) {
+  .rate {
+    margin: 0.5rem 0;
+  }
+  .rate span {
+    cursor: pointer;
+    background-color: var(--color-grey--dark);
+    color: var(--color-grey--Medium);
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: all 0.3s;
+  }
+  .rate span:not(:last-child) {
+    margin-right: 1rem;
+  }
 }
