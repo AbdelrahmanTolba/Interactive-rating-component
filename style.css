@@ -161,9 +161,6 @@ body {
   color: var(--color-primary);
 }
 @media (max-width: 23.4375em) {
-  .rate {
-    margin: 0.5rem 0;
-  }
   .rate span {
     cursor: pointer;
     background-color: var(--color-grey--dark);
